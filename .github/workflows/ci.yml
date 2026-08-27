@@ -2,12 +2,12 @@ name: CI Python
 
 on:
   push:
-    branches: [main]
+   branches: [main]
   pull_request:
-    branches: [main]
+   branches: [main]
 jobs:
-  testar:
-    runs-on: ubuntu-latest
+ testar:
+  runs-on: ubuntu-latest
   steps:
     - name: Baixar o código do repositório
       uses: actions/checkout@v4
@@ -19,3 +19,4 @@ jobs:
       run: python -m pip install -r requirements.txt
     - name: Executar testes
       run: python -m pytest -v
+
